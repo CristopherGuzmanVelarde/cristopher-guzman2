@@ -1,0 +1,5 @@
+services:
+  app:
+    image: cristopher/cristopher-guzman:latest
+    ports: 
+      - "8087:8087"

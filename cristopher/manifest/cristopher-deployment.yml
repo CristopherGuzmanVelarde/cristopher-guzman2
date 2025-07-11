@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cristopher-deployment
+  namespace: cristopher-namespace
+  labels:
+    app: micro
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: micro
+  template:
+    metadata:
+      labels: 
+        app: micro
+    spec:
+      containers:
+      - name: micro
+        image: cristopherguzman/cristopher-guzman:latest
+
